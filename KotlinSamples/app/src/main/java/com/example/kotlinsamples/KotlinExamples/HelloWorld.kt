@@ -9,4 +9,5 @@ fun main(args:Array<String>){
     println("My name is: ${KotObj.name}") // this is the same as "My name is: " + kotObj.name
 
 
+
 }
