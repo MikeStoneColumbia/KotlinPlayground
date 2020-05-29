@@ -39,6 +39,28 @@ Can only represen __true__ or __false__. Example, var bool: Boolean = true
 All the typical mathematical operations are present in Kotlin. One small thing to note. * can be used for multipication and to represent multiple multiple arguments.
 Logical and bitwise operations are the same as in Java __ && || ! ==_ Also using augmented operators such as _ += and /=_ also have same implementation as Java. > < >= <= are also used in Kotlin.
 
+### Arrays
+
+To create an array you must use the ArrayOf() call. One such example is __var numArray = arrayOf(1,2,3,4,5)__. You can also specify a certain type of array as such __var numArray = intArrayOf(1,2,3,4,5)__
+Now it should be noted that both examples would yeild an int array. The big difference isi that arrayOf() can take in different data types, while intArrayOf() only takes in ints. So
+_var numArray = arrayOf(1, '2', "3", 4.0, 5)_ would be valid despirt haveing int, double, char and string vals. If we use intArrayOf() then we would only be able to use ints.
+
+Another cool trick worth mentioning is that you can create an Array that already has precreated vals based on some rule or pattern. For example lets say we want to make an array that initially has
+the first 10 even numbers. You could do the following __var evenArr = IntArray(10){i -> i * 2}__. This takes advantage of the Lambda statements.
+
+Setting and retriving values in an array is also rather simple. if we have an array names. To get the first element we just use __names[0]__. If we want to change the first name we can use __names[0] = "bob"_
+arrays can also use the __set()__ and __get()__ methods as well. In Java set() and get() are typically used by ArrayList but in Kotlin they can be used by arrays as well. So using the previous example
+we can say __names.get(0)__ to get the first name and __names.set(0,"bob")__ to change the first name. We can also use methods such as _indexOf(), first(), last()_ to get the value at a certain index,
+first element of the array, and the last element.
+
+Arrays in Kotlin like Java are immutable in terms of their size. If you have a list of num and it contains [1,2,3] then we can't modify the array to become [1,2,3,4] (_i.e can't say num[3] = 4_). However,
+if we use the __plus()__ method we can get around it. _plus_ allows us to append to an array. It creates a new array that is larger in size and then copies over existing values, and then appends the new
+info. Example: __var names = arrayOf(1,2,3,4)__ we can exapnd it by __names = names.plus(5)__. This will return an array of __[1,2,3,4,5]__
+
+There are numerous ways to create a 2D array in Kotlin. One way is to make use of the lambda expressions as such __var array2D = Array(2) {IntArray(10)}__ This creates an array with 2 rows and 10 columns.
+Another method uses the _arrayOf()_ method and can be useful if you want to initizalize default values besides 0. __var array2D = arrayOf(IntArray(1,2),IntArray(3,4),IntArray(5,6))__. Thus creates a 2D
+array with 3 rows and 2 columns
+
 ### Elvis Operator
 
 _Too be filled in soon_
@@ -54,6 +76,12 @@ _To be filled in soon_
 ### Safe call
 
 _To be filled in soon_
+
+## I/O
+
+readLine() is an example of an Input command. It can take nums and Strings as input (Similar to _Scanner_ in Java). If you want to cast to Int must use __Integer.valueOf(readLine().toString())__.
+Example: __var age : Int = Integer.valueOf(readLine())__. Also if you are explitly storing a String, __var name : String = readline().toString()__. Note: _var name = readLine()_ would also work for storing
+some String.
 
 ## Classes
 
