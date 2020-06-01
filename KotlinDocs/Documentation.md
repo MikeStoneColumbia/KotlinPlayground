@@ -83,6 +83,18 @@ readLine() is an example of an Input command. It can take nums and Strings as in
 Example: __var age : Int = Integer.valueOf(readLine())__. Also if you are explitly storing a String, __var name : String = readline().toString()__. Note: _var name = readLine()_ would also work for storing
 some String.
 
+## Functions
+
+Always start off by using the key word __fun__ followed by the name of your function, and then any parameters. One main difference between Kotlin and Java is where we specify the return type.
+In Java it is common to see something like _public static int sum(int a, int b)_. The Kotlin equivalent is _fun sum(a: Int, b: Int) Int_. We specify the return type after the paramters but before the 
+brackets.
+
+One other small change is we can inline one-liner functions. Sum for example is only a + b. We can simplify that by creating: __fun sum(a: Int, b: Int) Int = a+b__. This way we avoid having to type out
+__return__ and the curly brackets.
+
+One very useful tool is the __vararg__ type. Vararg allows a function to take variable nums of paramters. Usually functions are constrainted to taking in a certain fixed number of paramters; for example
+like sum. It can ever only take in 2 paramters based on how it was implemented. varargs allows to use as many or as little parameters as we we would like. Check the __Functions__ file for an example.
+
 ## Classes
 
 Similar to java, Kotlin classes use the __class__ to delcare the creation of a new class. The format is usually _class NameOfClass {/* code class goes here */}_
