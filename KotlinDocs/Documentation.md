@@ -1,5 +1,9 @@
 # Simple documentation of Kotlin rules and syntax
 
+
+
+
+
 ## Variables
 
 We can create variables in Kotlin by using the __var__ or __val__ keywords. Simply say _var nameOfVar : valueDesired_ and the same thought applies to __val__. 
